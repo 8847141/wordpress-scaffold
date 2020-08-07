@@ -1,0 +1,17 @@
+<?php
+/**
+ * Displays pagination for the main query.
+ *
+ * @package YunluTheme
+ */
+
+$for_comments = isset( $for_comments ) ? $for_comments : false;
+
+if ( $for_comments ) {
+	paginate_comments_links();
+} elseif ( is_singular() ) {
+	wp_link_pages();
+} else {
+	the_posts_pagination();
+}
+ ?><?php /**PATH D:\xampp\htdocs\wordpress-scaffold\wp-content\themes\wpemerge/views/partials/pagination.php ENDPATH**/ ?>
